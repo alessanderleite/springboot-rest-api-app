@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.alessanderleite.app.model.Blog;
 
 @Repository
-public interface BlogRepository extends JpaRepository<Blog, Integer> {
+public interface BlogRepository extends JpaRepository<Blog, Long> {
 	
 	List<Blog> findByTitleContainingOrContentContaining(String text, String textAgain);
 }
