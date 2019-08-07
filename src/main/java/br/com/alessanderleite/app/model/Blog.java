@@ -13,7 +13,7 @@ public class Blog {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	@Column(name = "title")
 	private String title;
@@ -23,17 +23,16 @@ public class Blog {
 
 	public Blog() {}
 
-	public Blog(int id, String title, String content) {
-		this.setId(id);
+	public Blog(String title, String content) {
 		this.setTitle(title);
 		this.setContent(content);
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -57,6 +56,4 @@ public class Blog {
 	public String toString() {
 		return "Blog [id=" + id + ", title=" + title + ", content=" + content + "]";
 	}
-	
-	
 }
